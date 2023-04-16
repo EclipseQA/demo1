@@ -21,8 +21,7 @@ public class MainMenu {
         Button exitButton = new Button("Exit");
 
         // Set the action for the play button
-        testButton.setOnAction(event -> {
-            // Create the TicTacToeGame and show it
+        testButton.setOnAction(event -> 
             TestsMenu testsMenu = new TestsMenu(stage);
             testsMenu.show();
         });
