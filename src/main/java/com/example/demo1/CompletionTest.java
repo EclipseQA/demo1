@@ -35,11 +35,20 @@ public class CompletionTest {
     public void show() {
         // Create UI components
         verbLabel = new Label();
+        verbLabel.getStyleClass().add("verb-label");
         pastTenseField = new TextField();
         pastParticipleField = new TextField();
         nextButton = new Button("Next");
+        nextButton.getStyleClass().add("grey-button");
         checkButton = new Button("Check");
         backButton = new Button("Back");
+        backButton.getStyleClass().add("grey-button");
+        Label label1 = new Label("Irregular Verb:");
+        Label label2 = new Label("Past Tense:");
+        Label label3 = new Label("Past Participle:");
+        label1.getStyleClass().add("completion-label");
+        label2.getStyleClass().add("completion-label");
+        label3.getStyleClass().add("completion-label");
 
         // Set up event handling for the Next button
         nextButton.setOnAction(e -> nextVerb());
@@ -56,11 +65,11 @@ public class CompletionTest {
         layout.setHgap(10);
         layout.setVgap(10);
         layout.setPadding(new Insets(25, 25, 25, 25));
-        layout.add(new Label("Irregular Verb:"), 0, 0);
+        layout.add(label1, 0, 0);
         layout.add(verbLabel, 1, 0);
-        layout.add(new Label("Past Tense:"), 0, 1);
+        layout.add(label2, 0, 1);
         layout.add(pastTenseField, 1, 1);
-        layout.add(new Label("Past Participle:"), 0, 2);
+        layout.add(label3, 0, 2);
         layout.add(pastParticipleField, 1, 2);
         VBox buttonBox = new VBox(10);
         buttonBox.setAlignment(Pos.CENTER_RIGHT);
@@ -68,7 +77,8 @@ public class CompletionTest {
         layout.add(buttonBox, 1, 3);
 
         // Set up the scene and show the window
-        Scene scene = new Scene(layout, 400, 250);
+        Scene scene = new Scene(layout, 800, 550);
+        scene.getStylesheets().add("style.css");
         stage.setScene(scene);
         stage.setTitle("Completion Test");
         stage.show();
