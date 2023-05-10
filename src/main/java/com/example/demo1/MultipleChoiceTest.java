@@ -55,13 +55,13 @@ public class MultipleChoiceTest {
         root.setAlignment(Pos.CENTER);
 
         // Title label
-        Label titleLabel = new Label("Irregular Verbs Learning Program");
-        titleLabel.setFont(new Font("Arial", 24));
-        titleLabel.setTextAlignment(TextAlignment.CENTER);
+        Label taskLabel = new Label(" Fill in the gap with a verb in its correct form:");
+        taskLabel.getStyleClass().add("task-label");
+        taskLabel.setTextAlignment(TextAlignment.CENTER);
 
         // Sentence label
         Label sentenceLabel = new Label();
-        sentenceLabel.setFont(new Font("Arial", 16));
+        sentenceLabel.getStyleClass().add("sentence-label");
         sentenceLabel.setTextAlignment(TextAlignment.CENTER);
 
         // Radio buttons for options
@@ -76,9 +76,10 @@ public class MultipleChoiceTest {
         // Check button
         Button checkButton = new Button("Check");
         Button backButton = new Button("Back");
+        backButton.getStyleClass().add("grey-button");
 
         // Add components to the root pane
-        root.getChildren().addAll(titleLabel, sentenceLabel, option1, option2, option3, checkButton, backButton);
+        root.getChildren().addAll(taskLabel, sentenceLabel, option1, option2, option3, checkButton, backButton);
 
         // Set the first sentence and options
         setSentenceAndOptions(sentenceLabel, option1, option2, option3, 0);
@@ -131,7 +132,7 @@ public class MultipleChoiceTest {
                     numCorrect = 0;
                     numIncorrect = 0;
                     root.getChildren().clear();
-                    root.getChildren().addAll(titleLabel, sentenceLabel, option1, option2, option3, checkButton, backButton);
+                    root.getChildren().addAll(taskLabel, sentenceLabel, option1, option2, option3, checkButton, backButton);
                     setSentenceAndOptions(sentenceLabel, option1, option2, option3, 0);
                 });
                 root.getChildren().addAll(finalResultsLabel, numCorrectLabel, numIncorrectLabel, tryAgainButton);
@@ -143,7 +144,8 @@ public class MultipleChoiceTest {
         });
 
         // Create the scene
-        Scene scene = new Scene(root, 600, 400);
+        Scene scene = new Scene(root, 800, 550);
+        scene.getStylesheets().add("style.css");
 
         // Set the stage properties
         stage.setTitle("MultipleChoice Test");

@@ -21,6 +21,8 @@ public class Theory {
 
         // Create the ImageView and set its properties
         ImageView imageView = new ImageView(image);
+        imageView.setFitWidth(800);
+        imageView.setFitHeight(10099);
         imageView.setPreserveRatio(true);
         imageView.setSmooth(true);
         imageView.setCache(true);
@@ -33,6 +35,7 @@ public class Theory {
 
         // Set up the Back button
         Button backButton = new Button("Back");
+        backButton.getStyleClass().add("theory-back-button");
         backButton.setOnAction(e -> goBack());
         HBox topPane = new HBox(backButton);
         topPane.setAlignment(Pos.CENTER_LEFT);
@@ -43,7 +46,8 @@ public class Theory {
         root.setTop(topPane);
 
         // Create the Scene and set the BorderPane as its root
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(root, 800, 550);
+        scene.getStylesheets().add("style.css");
 
         // Set the Stage properties and show it
         stage.setScene(scene);
@@ -52,8 +56,8 @@ public class Theory {
     }
 
     private void goBack() {
-       MainMenu mainMenu = new MainMenu(stage);
-       mainMenu.show();
+        MainMenu mainMenu = new MainMenu(stage);
+        mainMenu.show();
     }
 
     public Theory(Stage stage) {

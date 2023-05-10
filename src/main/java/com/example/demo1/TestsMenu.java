@@ -3,6 +3,7 @@ package com.example.demo1;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -14,6 +15,9 @@ public class TestsMenu {
         Button multipleChoiceTestButton = new Button("Sentence practice");
         Button completionTestButton = new Button("Table practice");
         Button backButton = new Button("Back");
+        backButton.getStyleClass().add("grey-button");
+        Label menuLabel = new Label("Choose preferred activity:");
+        menuLabel.getStyleClass().add("menu-label");
 
         // Set the action for the play button
         multipleChoiceTestButton.setOnAction(event -> {
@@ -34,11 +38,12 @@ public class TestsMenu {
         });
 
         // Add the buttons to the layout
-        VBox layout = new VBox(20, multipleChoiceTestButton, completionTestButton, backButton);
+        VBox layout = new VBox(20, menuLabel, multipleChoiceTestButton, completionTestButton, backButton);
         layout.setAlignment(Pos.CENTER);
 
         // Create the scene and show it
-        Scene scene = new Scene(layout, 400, 400);
+        Scene scene = new Scene(layout, 800, 550);
+        scene.getStylesheets().add("style.css");
         stage.setScene(scene);
         stage.setTitle("Tests Menu");
         stage.show();

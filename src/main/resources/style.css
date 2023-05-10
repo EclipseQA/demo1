@@ -1,0 +1,107 @@
+.label {
+    -fx-font: 34px "System";
+    -fx-text-fill: #303030;
+}
+
+.subheading {
+-fx-font: 22px "System";
+}
+
+.footer {
+-fx-font: 11px "System";
+-fx-text-fill: #707070;
+}
+
+.button {
+    -fx-pref-height: 35px;
+    -fx-pref-width: 200px;
+    -fx-text-fill: #ffffff;
+    -fx-font: 20px "System";
+    -fx-background-color: #768859;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+    -fx-padding: 5;
+    -fx-font: 16px "System";
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #accd79;
+}
+
+/*Tests menu*/
+
+.name-label {
+    -fx-font: 30px "System";
+    -fx-text-fill: #303030;
+}
+
+.menu-label {
+    -fx-font: 26px "System";
+    -fx-text-fill: #505050;
+}
+
+.grey-button {
+    -fx-background-color: #bcbdb8;
+}
+
+.grey-button:hover {
+    -fx-background-color: #8a8a8a;
+}
+
+/*Multiple choice test*/
+
+.task-label {
+    -fx-font: 20px "System";
+    -fx-text-fill: #606060;
+}
+
+.sentence-label {
+    -fx-font: 24px "System";
+    -fx-text-fill: #303030;
+}
+
+.radio-button {
+    -fx-font: 18px "System";
+    -fx-text-fill: #505050;
+    -fx-cursor: hand;
+}
+
+.radio-button:hover{
+    -fx-text-fill: #222222;
+}
+
+/*Completion test*/
+
+.text-field {
+    -fx-pref-height: 35px;
+    -fx-pref-width: 200px;
+    -fx-border-color: #accd79;
+    -fx-border-style: solid;
+    -fx-border-width: 3px;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+    -fx-font: 16px "System";
+}
+
+.text-field:hover {
+    -fx-border-color: #accd79;
+}
+
+.completion-label {
+    -fx-font: 20px "System";
+    -fx-text-fill: #606060;
+}
+
+.verb-label {
+    -fx-font: 22px "System";
+    -fx-text-fill: #404040;
+}
+
+/*Theory*/
+
+.theory-back-button {
+    -fx-pref-width: 800px;
+    -fx-font: 22px "System";
+}
+
